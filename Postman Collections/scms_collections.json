@@ -579,7 +579,7 @@
 									"",
 									"",
 									"",
-									"pm.test(\"Test Name\", function () {",
+									"pm.test(\"Test scList data\", function () {",
 									"",
 									"var jsonData = pm.response.json();",
 									"    for (var loop = 0; loop < jsonData.scList.length; loop++)",
