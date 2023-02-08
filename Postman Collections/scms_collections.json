@@ -571,7 +571,7 @@
 									"    pm.expect(jsonData.scList).to.be.a('array');",
 									"});",
 									"",
-									"pm.test(\"Your_Test_Name\", function(){",
+									"pm.test(\"Test connection header\", function(){",
 									"",
 									"pm.response.to.have.header(\"Connection\");",
 									"",
@@ -613,7 +613,7 @@
 							{
 								"description": "(Required) ",
 								"key": "userid",
-								"value": "-18232745"
+								"value": "3601742671"
 							},
 							{
 								"description": "(Required) ",
