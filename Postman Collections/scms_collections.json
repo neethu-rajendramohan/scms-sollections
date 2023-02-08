@@ -38,11 +38,11 @@
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.code).to.be.a(\"number\");",
 									"});",
-									"pm.test(\"Your test name\", function () {",
+									"pm.test(\"Test reponse code\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.code).to.eql(201);",
 									"});",
-									"pm.test(\"Your test name\", function () {",
+									"pm.test(\"Test reponse message\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.message).to.eql('Successfully updated default supplycenter');",
 									"});",
@@ -62,7 +62,7 @@
 							{
 								"description": "(Required) ",
 								"key": "userid",
-								"value": "-18232745"
+								"value": "3601742671"
 							},
 							{
 								"description": "(Required) ",
