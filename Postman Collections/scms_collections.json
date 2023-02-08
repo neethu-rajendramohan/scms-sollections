@@ -1,0 +1,774 @@
+{
+	"info": {
+		"_postman_id": "1bffaaf4-5d9f-49e6-9b80-ee4cdbe3cbdf",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "supplycenter",
+			"item": [
+				{
+					"name": "default",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f7bc674-3aee-40dd-a998-7acd3bf3e638",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 800ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"pm.test(\"Response has a data property\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.be.a(\"string\");",
+									"});",
+									"pm.test(\"Response has a data property\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.be.a(\"number\");",
+									"});",
+									"pm.test(\"Your test name\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(201);",
+									"});",
+									"pm.test(\"Your test name\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql('Successfully updated default supplycenter');",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "53af12e2-15f4-4ece-b0ad-05fa64000e5f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "userid",
+								"value": "-18232745"
+							},
+							{
+								"description": "(Required) ",
+								"key": "username",
+								"value": "aute esse Excepteur"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"defaultSc\": 1,\n  \"scId\": 749979\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/supplycenter/default",
+						"description": "Save default supply center for user"
+					},
+					"response": [
+						{
+							"id": "08309119-b583-4553-839d-9419c32043a8",
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultSc\": 1,\n  \"scId\": 749979\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						},
+						{
+							"id": "379b5d3c-c533-4e4a-85c2-80687131f4f8",
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultSc\": 1,\n  \"scId\": 749979\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						},
+						{
+							"id": "5439659a-0ff1-45bf-abea-e9bd89325160",
+							"name": "Unprocessable Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultSc\": 1,\n  \"scId\": 749979\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default"
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -58464217.187496506,\n  \"message\": \"amet minim\"\n}"
+						},
+						{
+							"id": "81f9b4d2-9a1d-49d5-aeb0-7f7ec1b5efb9",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "3601742671"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultSc\": 1,\n  \"scId\": 40747\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -58464217.187496506,\n  \"message\": \"amet minim\"\n}"
+						}
+					]
+				},
+				{
+					"name": "default-exp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "efcbd40f-bcde-4237-b334-72d3c0ada742",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"message\");",
+									"",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"code\");",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 800ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"pm.test(\"Response has a data property\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.be.a(\"string\");",
+									"});",
+									"pm.test(\"Response has a data property\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.be.a(\"number\");",
+									"});",
+									"pm.test(\"Your test name\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.code).to.eql(201);",
+									"});",
+									"pm.test(\"Your test name\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql('Successfully updated default shopping experience');",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "5b7afda8-0d35-408d-8689-de455d0b4b37",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "username",
+								"value": "aute esse Excepteur"
+							},
+							{
+								"description": "(Required) ",
+								"key": "userid",
+								"value": "-18232745"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"defaultExperience\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/supplycenter/default-exp",
+						"description": "Save default shopping experience of user"
+					},
+					"response": [
+						{
+							"id": "27af8b15-0e90-4e99-a4cd-766bd6296d67",
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									},
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultExperience\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default-exp"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						},
+						{
+							"id": "407fc975-0d43-4db6-b0f0-2d6997f87a79",
+							"name": "Unsupported Media Type",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									},
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultExperience\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default-exp"
+							},
+							"status": "Unsupported Media Type",
+							"code": 415,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						},
+						{
+							"id": "7c0bf3df-ae0f-4e5d-bb2b-f1810eb40f7f",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									},
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultExperience\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default-exp"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -58464217.187496506,\n  \"message\": \"amet minim\"\n}"
+						},
+						{
+							"id": "afa37260-1576-4b3f-b522-dbf2c6dba702",
+							"name": "Unprocessable Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									},
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultExperience\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default-exp"
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -58464217.187496506,\n  \"message\": \"amet minim\"\n}"
+						},
+						{
+							"id": "e0b9fca6-58a5-4061-ab44-5e472550cf22",
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									},
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"defaultExperience\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/supplycenter/default-exp"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "ScHome",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f2c62e6f-5a3f-4e96-8553-375c20223bd2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 800ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"defaultExperience\");",
+									"});",
+									"",
+									"pm.test(\"Response has a data property\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.scList).to.be.a('array');",
+									"});",
+									"",
+									"pm.test(\"Your_Test_Name\", function(){",
+									"",
+									"pm.response.to.have.header(\"Connection\");",
+									"",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Test Name\", function () {",
+									"",
+									"var jsonData = pm.response.json();",
+									"    for (var loop = 0; loop < jsonData.scList.length; loop++)",
+									"{",
+									"",
+									"   pm.expect(jsonData.scList[loop].scName).to.be.a('string');",
+									"   pm.expect(jsonData.scList[loop].defaultSc).to.be.a('number');",
+									"   pm.expect(jsonData.scList[loop].scDisplayDirectShip).to.be.a('number');",
+									"   pm.expect(jsonData.scList[loop].scId).to.be.a('string');",
+									"   ",
+									"   pm.expect(jsonData.scList[loop], 'Does not have the property').to.have.property('scId');",
+									"   pm.expect(jsonData.scList[loop], 'Does not have the property').to.have.property('defaultSc');",
+									"   pm.expect(jsonData.scList[loop], 'Does not have the property').to.have.property('scDisplayDirectShip');",
+									"    ",
+									"}",
+									"",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "5337263f-f48b-440f-8f81-e281793a300a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "(Required) ",
+								"key": "userid",
+								"value": "-18232745"
+							},
+							{
+								"description": "(Required) ",
+								"key": "username",
+								"value": "aute esse Excepteur"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/supplycenter/home",
+						"description": "Fetch Supplycenter List"
+					},
+					"response": [
+						{
+							"id": "47f59250-7833-4084-8d0f-c73778c01f78",
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"url": "{{baseUrl}}/supplycenter/home"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"scList\": [\n    {\n      \"scName\": \"et voluptate eu\",\n      \"scAddress1\": \"veniam eiusmod\",\n      \"scAddress2\": \"pariatur ea in nisi\",\n      \"scCity\": \"amet sunt\",\n      \"scState\": \"adipisicing elit\",\n      \"scPostalCode\": \"Excepteur labore aliquip enim\",\n      \"scId\": \"in Lorem anim\",\n      \"defaultSc\": 74931840,\n      \"scDisplayDirectShip\": -44323420\n    },\n    {\n      \"scName\": \"sunt Duis officia\",\n      \"scAddress1\": \"nisi aliquip\",\n      \"scAddress2\": \"in velit dolore ea ex\",\n      \"scCity\": \"Excepteur quis id aute pariatur\",\n      \"scState\": \"cupidatat eiusmod commodo cillum\",\n      \"scPostalCode\": \"eu\",\n      \"scId\": \"pariatur veniam velit est\",\n      \"defaultSc\": -54548656,\n      \"scDisplayDirectShip\": 83138781\n    }\n  ],\n  \"defaultExperience\": -76255168\n}"
+						},
+						{
+							"id": "632dbd60-4ceb-4ab6-9cdd-c726d557f5eb",
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"url": "{{baseUrl}}/supplycenter/home"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"scList\": [\n    {\n      \"scName\": \"voluptate labore laboris eu\",\n      \"scAddress1\": \"proident\",\n      \"scAddress2\": \"est eu\",\n      \"scCity\": \"minim\",\n      \"scState\": \"qui esse do\",\n      \"scPostalCode\": \"aliquip esse in\",\n      \"scId\": \"magna culpa\",\n      \"defaultSc\": 31892930,\n      \"scDisplayDirectShip\": -36926631\n    },\n    {\n      \"scName\": \"in veniam deserunt\",\n      \"scAddress1\": \"consectetur nulla esse tempor Ut\",\n      \"scAddress2\": \"occaecat\",\n      \"scCity\": \"Excepteur do\",\n      \"scState\": \"in nostrud sunt proident et\",\n      \"scPostalCode\": \"nulla ex\",\n      \"scId\": \"dolor nulla exercitation\",\n      \"defaultSc\": 63678570,\n      \"scDisplayDirectShip\": 20980312\n    }\n  ],\n  \"defaultExperience\": -1025505\n}"
+						},
+						{
+							"id": "7a70953c-6cd0-41e4-9f8e-fb0def172881",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"url": "{{baseUrl}}/supplycenter/home"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -58464217.187496506,\n  \"message\": \"amet minim\"\n}"
+						},
+						{
+							"id": "d5492dd0-4329-4c06-8aa8-3191ca70e594",
+							"name": "Unprocessable Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) ",
+										"key": "userid",
+										"value": "-18232745"
+									},
+									{
+										"description": "(Required) ",
+										"key": "username",
+										"value": "aute esse Excepteur"
+									}
+								],
+								"url": "{{baseUrl}}/supplycenter/home"
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": -58464217.187496506,\n  \"message\": \"amet minim\"\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "25113a68-24eb-4e8c-a38f-f61ff2a4eb5c"
+		}
+	],
+	"variable": [
+		{
+			"id": "ff81158f-f698-4a2f-b3b8-57e03d79de95",
+			"key": "baseUrl",
+			"value": "https://www.qa.thermofisher.com/api/store/scms-v2",
+			"type": "string"
+		}
+	]
+}
