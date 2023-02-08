@@ -577,8 +577,6 @@
 									"",
 									"});",
 									"",
-									"",
-									"",
 									"pm.test(\"Test scList data\", function () {",
 									"",
 									"var jsonData = pm.response.json();",
@@ -595,8 +593,6 @@
 									"   pm.expect(jsonData.scList[loop], 'Does not have the property').to.have.property('scDisplayDirectShip');",
 									"    ",
 									"}",
-									"",
-									"",
 									"});"
 								],
 								"type": "text/javascript"
